@@ -1,0 +1,9 @@
+ {
+      "blueprint" : "AmbariBlueprint",
+      "default_password" : "admin",
+      "host_groups" :[
+ADD_NODE_1
+ADD_NODE_2
+ADD_NODE_3
+      ]
+ }

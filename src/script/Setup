@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+printf "\n\n Setting up the Ambari Server & Agents & Services & BigSQL (Estimated time for completion is around 60 mins)\n"
+read -rep $'\n URL for ambari.repo file : ' ambariRepoURL
+read -rep $'\n\n Hostname for the nodes in the cluster (more than one hostname delimited by comma): ' hostNames
+read -rep $'\n\n Cluster Name : ' clusterName 
+read -rep $'\n\n Provide the URL for BigSQL Repo : ' bigsqlRepoURL
+read -rep $'\n\n Provide the Hostnames for the BigSQL Worker Nodes to be installed (more than one hostname delimited by comma): ' bigsqlworkers 
+
+## Install the Ambari Server + Agents + Amabari Services
+./cluster-setup $ambariRepoURL $hostNames $clusterName
+sleep 120s 
+./bigsql-setup $bigsqlRepoURL $bigsqlworkers 
+
+
