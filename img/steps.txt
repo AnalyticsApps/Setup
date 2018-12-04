@@ -1,0 +1,83 @@
+
+[root@testhost1 ~]# rpm -ivh SetupCluster-1.0-1.noarch.rpm
+Preparing...                          ################################# [100%]
+Updating / installing...
+   1:SetupCluster-1.0-1               ################################# [100%]
+[root@testhost1 ~]#
+[root@testhost1 ~]#
+[root@testhost1 ~]# cd /opt/Setup/bin/
+[root@testhost1 bin]# ls
+bigsql-setup  cluster-setup  Setup
+[root@testhost1 bin]#
+
+[root@testhost1 bin]#
+[root@testhost1 bin]# ./Setup
+
+
+ Setting up the Ambari Server & Agents & Services & BigSQL (Estimated time for completion is around 60 mins)
+
+ URL for ambari.repo file : http://public-repo-1.hortonworks.com/HDP/centos6/2.x/updates/2.6.5.0/hdp.repo
+
+
+ Hostname for the nodes in the cluster (more than one hostname delimited by comma): testhost2.ibm.com,testhost3.ibm.com
+
+
+ Cluster Name : TestCluster
+
+
+ Provide the URL for BigSQL Repo : <repoURL>/repos/BigSQL/RHEL7/x86_64/5.0.3.0/GMC3/IBM-Big_SQL-5_0_3_0.el7.x86_64.rpm
+
+
+ Provide the Hostnames for the BigSQL Worker Nodes to be installed (more than one hostname delimited by comma): testhost2.ibm.com,testhost3.ibm.com
+
+
+ Setting up the Ambari Server & Agents & Services (Estimated time for completion is 30 mins)
+
+
+ Downloding Ambari RPMs
+
+ Setting up the Ambari Server
+
+ Installing the Ambari Agent on -> testhost2.ibm.com
+
+ Configuring the Ambari Agent on -> testhost2.ibm.com
+
+ Installing the Ambari Agent on -> testhost3.ibm.com
+
+ Configuring the Ambari Agent on -> testhost3.ibm.com
+
+ Installing services using Ambari Blueprint
+
+ Installing the Services. You can see the progress of the installation from Ambari UI
+
+ Setting up of Ambari Server & Agents & Services completed !!!
+
+
+
+ Setting up the BigSQL (Estimated time for completion is 35-60 mins)
+
+
+ Downloding the BigSQL RPMs
+
+ Setting up the headnode
+
+ Setting up workernode -> testhost2.ibm.com
+
+ Setting up workernode -> testhost3.ibm.com
+
+ Setting up SSH between bigsql user
+
+ Setting up BigSQL Service for instalation
+
+ Installing BigSQL Service
+
+ Installing the BigSQL Service. You can see the progress of the installation from Ambari UI
+
+ BigSQL Installation completed !!!
+
+ Starting the BigSQL service
+
+ BigSQL Installation completed !!!!!
+
+
+[root@testhost1 bin]#
